@@ -14,6 +14,7 @@ This project simulates a color-tracking robot using C++, OpenCV(imgproc,highgui,
    For OpenCV installation:
    * Install required packages and tools: 
     sudo apt install -y g++ cmake make git libgtk2.0-dev pkg-config
+<<<<<<< HEAD
    * Download source: Clone the github repo link for latest OpenCV version from official page:
     git clone (latest git version url)
    * Build the source:
@@ -23,6 +24,17 @@ This project simulates a color-tracking robot using C++, OpenCV(imgproc,highgui,
    * FInally, build the source using make:
    make -j4
    * Install OpenCV Package:
+=======
+   * Download source: Clone the github repo link for latest OpenCV version from official page
+    git clone (latest git version url)
+   * Build the source:
+   mkdir -p build && cd build
+   * Then, generate the build scripts using CMake
+    cmake ../opencv
+   * FInally, build the source using make
+   make -j4
+   * Install OpenCV Package
+>>>>>>> 4b46472b64372c4cee65ebbe56bddec03f82c93a
    sudo make install
 2. Build the project using CMake.
 3. Run the executable to simulate the color-tracking robot.
