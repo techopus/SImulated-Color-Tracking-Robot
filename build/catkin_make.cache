@@ -1,0 +1,2 @@
+my_robot_color_tracking:my_robot_control:my_robot_description:my_robot_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/nitin/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nitin/catkin_ws/install -G Unix Makefiles
