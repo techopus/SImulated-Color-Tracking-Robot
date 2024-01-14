@@ -141,11 +141,16 @@ color_tracking_node_EXTERNAL_OBJECTS =
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.2.0
+/home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /opt/ros/noetic/lib/libroscpp.so
+/home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /opt/ros/noetic/lib/librosconsole.so
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /opt/ros/noetic/lib/librosconsole_log4cxx.so
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /opt/ros/noetic/lib/librosconsole_backend_interface.so
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /opt/ros/noetic/lib/libxmlrpcpp.so
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /opt/ros/noetic/lib/librostime.so
 /home/nitin/catkin_ws/devel/lib/my_robot_color_tracking/color_tracking_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0

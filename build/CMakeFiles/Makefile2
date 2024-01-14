@@ -64,18 +64,12 @@ CMAKE_BINARY_DIR = /home/nitin/catkin_ws/build
 
 # The main recursive "all" target.
 all: gtest/all
-all: my_robot_gazebo/all
-all: my_robot_control/all
 all: my_robot_color_tracking/all
-all: my_robot_description/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
-preinstall: my_robot_gazebo/preinstall
-preinstall: my_robot_control/preinstall
 preinstall: my_robot_color_tracking/preinstall
-preinstall: my_robot_description/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -85,10 +79,7 @@ clean: CMakeFiles/run_tests.dir/clean
 clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/doxygen.dir/clean
 clean: gtest/clean
-clean: my_robot_gazebo/clean
-clean: my_robot_control/clean
 clean: my_robot_color_tracking/clean
-clean: my_robot_description/clean
 .PHONY : clean
 
 #=============================================================================
@@ -151,77 +142,33 @@ my_robot_color_tracking/preinstall:
 .PHONY : my_robot_color_tracking/preinstall
 
 # Recursive "clean" directory target.
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
 my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
-my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+my_robot_color_tracking/clean: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 .PHONY : my_robot_color_tracking/clean
-
-#=============================================================================
-# Directory level rules for directory my_robot_control
-
-# Recursive "all" directory target.
-my_robot_control/all: my_robot_control/CMakeFiles/robot_control_node.dir/all
-.PHONY : my_robot_control/all
-
-# Recursive "preinstall" directory target.
-my_robot_control/preinstall:
-.PHONY : my_robot_control/preinstall
-
-# Recursive "clean" directory target.
-my_robot_control/clean: my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-my_robot_control/clean: my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-my_robot_control/clean: my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-my_robot_control/clean: my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-my_robot_control/clean: my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-my_robot_control/clean: my_robot_control/CMakeFiles/robot_control_node.dir/clean
-.PHONY : my_robot_control/clean
-
-#=============================================================================
-# Directory level rules for directory my_robot_description
-
-# Recursive "all" directory target.
-my_robot_description/all:
-.PHONY : my_robot_description/all
-
-# Recursive "preinstall" directory target.
-my_robot_description/preinstall:
-.PHONY : my_robot_description/preinstall
-
-# Recursive "clean" directory target.
-my_robot_description/clean: my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-my_robot_description/clean: my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-my_robot_description/clean: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-my_robot_description/clean: my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-my_robot_description/clean: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-my_robot_description/clean: my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/clean
-my_robot_description/clean: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-my_robot_description/clean: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-my_robot_description/clean: my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-my_robot_description/clean: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : my_robot_description/clean
-
-#=============================================================================
-# Directory level rules for directory my_robot_gazebo
-
-# Recursive "all" directory target.
-my_robot_gazebo/all:
-.PHONY : my_robot_gazebo/all
-
-# Recursive "preinstall" directory target.
-my_robot_gazebo/preinstall:
-.PHONY : my_robot_gazebo/preinstall
-
-# Recursive "clean" directory target.
-my_robot_gazebo/clean: my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : my_robot_gazebo/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/tests.dir
@@ -459,186 +406,134 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir
+# Target rules for target my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/build.make my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/build.make my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/all
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : _catkin_empty_exported_target
+rosgraph_msgs_generate_messages_lisp: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_lisp
 
 # clean rule for target.
-my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/build.make my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : my_robot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/clean
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir
+# Target rules for target my_robot_color_tracking/CMakeFiles/color_tracking_node.dir
 
 # All Build rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/build.make my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/build.make my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num=1,2 "Built target color_tracking_node"
+.PHONY : my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/all
 
 # Build rule for subdir invocation for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : std_msgs_generate_messages_eus
-
-# clean rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
-
-# clean rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
-
-# clean rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : std_msgs_generate_messages_nodejs
-
-# clean rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
-
-# clean rule for target.
-my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/build.make my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-.PHONY : my_robot_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_control/CMakeFiles/robot_control_node.dir
-
-# All Build rule for target.
-my_robot_control/CMakeFiles/robot_control_node.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/robot_control_node.dir/build.make my_robot_control/CMakeFiles/robot_control_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/robot_control_node.dir/build.make my_robot_control/CMakeFiles/robot_control_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num=11,12 "Built target robot_control_node"
-.PHONY : my_robot_control/CMakeFiles/robot_control_node.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_control/CMakeFiles/robot_control_node.dir/rule: cmake_check_build_system
+my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_control/CMakeFiles/robot_control_node.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_control/CMakeFiles/robot_control_node.dir/rule
+.PHONY : my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/rule
 
 # Convenience name for target.
-robot_control_node: my_robot_control/CMakeFiles/robot_control_node.dir/rule
-.PHONY : robot_control_node
+color_tracking_node: my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/rule
+.PHONY : color_tracking_node
 
 # clean rule for target.
-my_robot_control/CMakeFiles/robot_control_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_control/CMakeFiles/robot_control_node.dir/build.make my_robot_control/CMakeFiles/robot_control_node.dir/clean
-.PHONY : my_robot_control/CMakeFiles/robot_control_node.dir/clean
+my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/build.make my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : roscpp_generate_messages_eus
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 
 #=============================================================================
 # Target rules for target my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_py.dir
@@ -667,6 +562,32 @@ my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
 .PHONY : my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
 # Target rules for target my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
@@ -693,6 +614,32 @@ my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clea
 .PHONY : my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+.PHONY : my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
 # Target rules for target my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
@@ -717,6 +664,318 @@ geometry_msgs_generate_messages_cpp: my_robot_color_tracking/CMakeFiles/geometry
 my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
 	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 .PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : roscpp_generate_messages_cpp
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : roscpp_generate_messages_nodejs
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : std_msgs_generate_messages_py
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : roscpp_generate_messages_py
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : geometry_msgs_generate_messages_eus
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : std_msgs_generate_messages_eus
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : roscpp_generate_messages_lisp
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : std_msgs_generate_messages_cpp
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : geometry_msgs_generate_messages_py
+
+# clean rule for target.
+my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Target rules for target my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
@@ -771,420 +1030,56 @@ my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
 .PHONY : my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
+# Target rules for target my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
-.PHONY : my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-sensor_msgs_generate_messages_lisp: my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sensor_msgs_generate_messages_lisp
+std_msgs_generate_messages_lisp: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : std_msgs_generate_messages_lisp
 
 # clean rule for target.
-my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-.PHONY : my_robot_color_tracking/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir
+# Target rules for target my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_py: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : geometry_msgs_generate_messages_py
+std_msgs_generate_messages_nodejs: my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : std_msgs_generate_messages_nodejs
 
 # clean rule for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# clean rule for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# clean rule for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : geometry_msgs_generate_messages_eus
-
-# clean rule for target.
-my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-.PHONY : my_robot_color_tracking/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_color_tracking/CMakeFiles/color_tracking_node.dir
-
-# All Build rule for target.
-my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/build.make my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/build.make my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num=1,2 "Built target color_tracking_node"
-.PHONY : my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/rule
-
-# Convenience name for target.
-color_tracking_node: my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/rule
-.PHONY : color_tracking_node
-
-# clean rule for target.
-my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/build.make my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/clean
-.PHONY : my_robot_color_tracking/CMakeFiles/color_tracking_node.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : roscpp_generate_messages_nodejs
-
-# clean rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : roscpp_generate_messages_eus
-
-# clean rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# clean rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : roscpp_generate_messages_cpp
-
-# clean rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# clean rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : roscpp_generate_messages_py
-
-# clean rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/clean
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# clean rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# clean rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : roscpp_generate_messages_lisp
-
-# clean rule for target.
-my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : my_robot_description/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nitin/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nitin/catkin_ws/build/CMakeFiles 0
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# clean rule for target.
-my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : my_robot_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+.PHONY : my_robot_color_tracking/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -2,7 +2,7 @@
 
 #include <ros/ros.h>
 #include <std_msgs/Float64.h>
-
+#include <control_toolbox/pid.h>  // Include the PID controller header
 
 class RobotControlNode
 {
@@ -17,17 +17,19 @@ public:
         right_motor_pub_ = nh_.advertise<std_msgs::Float64>("/my_robot/right_motor_controller/command", 1);
 
         // Initialize PID controller parameters
-        pid_.setPID(1.0, 0.1, 0.01);  // Set your PID gains here
-        pid_.setOutputLimits(-1.0, 1.0);  // Set your output limits here
+        pid_.initPid(1.0, 0.1, 0.01, 0.0, 0.0);  // Set your PID gains here
     }
 
     void colorTrackingCallback(const std_msgs::Float64::ConstPtr& msg)
     {
         // Example PID control
         double tracking_error = 0.0;  // Replace this with actual error calculation
-        double control_output = pid_.computeCommand(tracking_error);
+        double control_output = pid_.computeCommand(tracking_error, ros::Duration(0.1));  // Replace the duration as needed
 
-        // Apply control output to both left and right motors
+        // Apply control output to both left and right motors with output limits
+        double output_limit = 1.0;  // Set your output limits here
+        control_output = std::max(std::min(control_output, output_limit), -output_limit);
+
         std_msgs::Float64 left_command, right_command;
         left_command.data = control_output;
         right_command.data = control_output;
@@ -55,8 +57,6 @@ int main(int argc, char** argv)
     ros::spin();
     return 0;
 }
-
-
 
 
 

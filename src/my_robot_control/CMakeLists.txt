@@ -10,6 +10,7 @@ project(my_robot_control)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+  control_toolbox  #include control_toolbox as well
 )
 
 ## System dependencies are found with CMake's conventions

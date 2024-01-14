@@ -9,6 +9,7 @@ project(my_robot_color_tracking)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   cv_bridge
+  roscpp
   rospy
   sensor_msgs
 )
@@ -204,6 +205,5 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
 add_executable(color_tracking_node src/color_tracking_node.cpp)
 target_link_libraries(color_tracking_node ${catkin_LIBRARIES})
